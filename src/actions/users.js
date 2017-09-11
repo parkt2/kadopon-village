@@ -7,19 +7,19 @@ export function authenticate(username, password) {
 	return {
 		type: USERS_AUTHENTICATE,
 		username,
-		password
+		password,
 	};
 }
 
 export function login() {
 	return {
-		type: USERS_LOGIN
+		type: USERS_LOGIN,
 	};
 }
 
 export function logout() {
 	return {
-		type: USERS_LOGOUT
+		type: USERS_LOGOUT,
 	};
 }
 
@@ -28,6 +28,6 @@ export function register(username, email, password) {
 		type: USERS_REGISTER,
 		username,
 		email,
-		password
+		password,
 	};
 }
