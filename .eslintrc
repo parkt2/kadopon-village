@@ -17,6 +17,7 @@
         "react",
     ],
     "rules": {
+        "no-multi-assign": 0,
         "indent": [
             "error",
             "tab",
