@@ -1,33 +1,31 @@
 export const USERS_AUTHENTICATE = "USERS_AUTHENTICATE";
-export const USERS_LOGIN = "USERS_LOGIN";
+export const USERS_LOGGING_IN = "USERS_LOGGING_IN";
 export const USERS_LOGOUT = "USERS_LOGOUT";
-export const USERS_REGISTER = "USERS_REGISTER";
+export const USERS_REGISTERING = "USERS_REGISTERING";
 
-export function authenticate(username, password) {
+export function usersAuthenticate(jwtToken) {
 	return {
 		type: USERS_AUTHENTICATE,
-		username,
-		password,
+		jwtToken,
 	};
 }
 
-export function login() {
+export function usersLoggingIn(isFetching = false) {
 	return {
-		type: USERS_LOGIN,
+		type: USERS_LOGGING_IN,
+		isFetching,
 	};
 }
 
-export function logout() {
+export function usersLogout() {
 	return {
 		type: USERS_LOGOUT,
 	};
 }
 
-export function register(username, email, password) {
+export function usersRegistering(isFetching = false) {
 	return {
-		type: USERS_REGISTER,
-		username,
-		email,
-		password,
+		type: USERS_REGISTERING,
+		isFetching,
 	};
 }
