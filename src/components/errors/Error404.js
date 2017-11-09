@@ -1,3 +1,10 @@
-// this should just be a stateless generic page to show that the user is on the
-// wrong page
-// alternatively, just route them back to "/"
+import React from "react";
+
+const Error404 = () => (
+	<div>
+		<h1>ERROR 404</h1>
+		<p>You've taken a wrong turn. :(</p>
+	</div>
+);
+
+export default Error404;
