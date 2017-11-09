@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import createHistory from "history/createBrowserHistory";
 import {
 	BrowserRouter as Router,
 	Route,
@@ -33,7 +34,7 @@ class Main extends Component {
 
 		return (
 			<div>
-				<Router history={history}>
+				<Router history={createHistory()}>
 					<div>
 						<Switch>
 							{this.renderRoutes(routes)}
