@@ -19,7 +19,7 @@ $ cd kadopon-village
 $ npm install
 ```
 
-Use an editor like [Atom](https://atom.io/) or [WebStorm](https://www.jetbrains.com/webstorm/) so you can take advantage of plugins specifically designed to develop Node.js applications.
+Use an editor like [Atom](https://atom.io/), [VSCode](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/) so you can take advantage of plugins specifically designed to develop Node.js applications.
 
 Make sure you take advantage of linting within the editor! Tests will not pass otherwise.
 
