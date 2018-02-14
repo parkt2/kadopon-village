@@ -41,3 +41,7 @@ Jest can run while you develop, and notifies you of any failed tests, much like 
 The primary language being used is es6-javascript - there are notable differences between this and vanilla javascript that you're probably used to. A set of code guidelines will be written up in a bit, but generally if you're linting often you should be fine.
 
 Program design documentation is held in this folder; there will also be discussions to be held regarding other facets of the architecture. Check the Documentation / Design board for more details.
+
+## Contributing
+
+Anyone can contribute! Check out the issues we have, fork the repository, and close issues using [these](https://help.github.com/articles/closing-issues-using-keywords/) guidelines when submitting a pull request. For the collaborators - people with push access - please just close issues via commits in the MERGE request commit; make sure you're working on your own branch.
