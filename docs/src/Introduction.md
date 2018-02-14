@@ -44,4 +44,16 @@ Program design documentation is held in this folder; there will also be discussi
 
 ## Contributing
 
-Anyone can contribute! Check out the issues we have, fork the repository, and close issues using [these](https://help.github.com/articles/closing-issues-using-keywords/) guidelines when submitting a pull request. For the collaborators - people with push access - please just close issues via commits in the MERGE request commit; make sure you're working on your own branch.
+Anyone can contribute! Check out the issues we have, fork the repository, and close issues using [these](https://help.github.com/articles/closing-issues-using-keywords/) guidelines when submitting a pull request. For the collaborators - people with push access - please just close issues via commits in the MERGE request commit; make sure you're working on your own branch. The commit should look like this:
+
+```
+fixes #<issue number> | description
+```
+
+That way we can take advantage of the poverty automation GitHub generously provides us by default. There's nothing wrong with manually closing issues though, especially if you forgot to commit in that manner. Non-closing commits should still retain some semblance of organization, however:
+
+```
+#<issue number> | description
+```
+
+That way we can keep track of what's going on with collaborator commits. Don't feel restricted by this if you're creating a pull request to submit though - but it definitely would be appreciated.
