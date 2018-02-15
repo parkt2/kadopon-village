@@ -17,15 +17,15 @@ export function userLoggingIn(isFetching = false) {
 	};
 }
 
-export function usersLogout() {
+export function userLogout() {
 	return {
-		type: USERS_LOGOUT,
+		type: USER_LOGOUT,
 	};
 }
 
-export function usersRegistering(isFetching = false) {
+export function userRegistering(isFetching = false) {
 	return {
-		type: USERS_REGISTERING,
+		type: USER_REGISTERING,
 		isFetching,
 	};
 }
