@@ -33,6 +33,17 @@ fixes/resolves #<issue number> | commit message
 ex. resolves #1 | finished contributors
 ```
 
+### Automation
+Automation doesn't handle fixes/resolves/other keywords unless they're being merged into the master branch. When you merge your changes into feature, please make sure you list the fixes you have (just go down the list of your commits being added):
+
+```
+fixes #1,
+fixes #2,
+fixes #3...
+```
+
+When merging from feature to master, just copy the fixes into the pull request and automation will handle them.
+
 ## ESLint
 We have an eslintrc using most of the airbnb defaults - make sure you're using this! Lint often so you don't mess up existing code or contribute differently-formatted code to the existing codebase.
 
