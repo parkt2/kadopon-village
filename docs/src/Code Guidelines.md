@@ -5,9 +5,19 @@ Code Guidelines
 This is specifically for collaborators with push access.
 
 ### Branches
-Create a branch with yourname-dev. This is where you commit your code.
+General workflow will look like this:
 
-Create a branch for features if none exists, and make sure you merge to that branch before touching master at all. The flow should be personal => feature => master.
+```
+master <- feature-* <- dev-*
+  |
+staging
+  |
+release
+```
+
+Create a branch with dev-yourname-feature. This is where you commit your code. You're free to handle the branches from feature your own way, i.e. with a master, or with individual branches for individual issues, or however you want to do it. Just make sure the base name follows convention: `dev-kev-automation` or `dev-kev-issue-21`.
+
+Create a branch for features if none exists, and make sure you merge to that branch before touching master at all. An example of a feature branch is `feature-automation`, where automation would be the feature name. Merge through the pull requests feature in GitHub.
 
 ### Committing
 Normal commits should look like the following:
