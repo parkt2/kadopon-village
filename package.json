@@ -7,7 +7,9 @@
 		"server": "nodemon server/app.js --exec babel-node",
 		"build": "babel server -d build",
 		"serve": "node build/app.js",
-		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+		"lint": "eslint ./server/*/*.js --fix",
+    "pretest": "npm run lint"
 	},
 	"dependencies": {
 		"express": "^4.16.2"
