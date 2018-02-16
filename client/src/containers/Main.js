@@ -23,7 +23,7 @@ class Main extends Component {
 	componentDidMount() {
 		this.callApi()
 			.then(res => this.setState({ response: res.express }))
-			.catch(err => console.log(err));
+			.catch(err => console.error(err));
 	}
 
 	callApi = async () => {
@@ -63,7 +63,7 @@ class Main extends Component {
 						<Switch>
 							<Route
 								path="/"
-								render={(routeProps) => (
+								render={routeProps => (
 									<Splash {...routeProps} testString={this.state.response} />
 								)}
 							/>

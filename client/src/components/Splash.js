@@ -15,6 +15,6 @@ export default class Splash extends Component {
 			<div>
 				<p>{testString}</p>
 			</div>
-		)
+		);
 	}
 }
