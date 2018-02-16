@@ -6,8 +6,11 @@ import configureStore from "./configureStore";
 import Main from "./containers/Main";
 import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
+import {
+	MONGO_CONNECT,
+} from "./config";
 
-mongoose.connect("localhost:27017/kadopon");
+mongoose.connect(MONGO_CONNECT);
 
 const store = configureStore();
 
