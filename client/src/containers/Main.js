@@ -1,17 +1,20 @@
 import React, { Component } from "react";
-import createHistory from "history/createBrowserHistory";
 import {
 	Router,
 	Route,
-	Redirect,
 	Switch,
 } from "react-router-dom";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import Splash from "../components/Splash";
 import Error404 from "../components/errors/Error404";
 
 class Main extends Component {
+	static propTypes = {
+		history: PropTypes.shape({}),
+	}
+
 	constructor(props) {
 		super(props);
 
@@ -58,7 +61,7 @@ class Main extends Component {
 
 		return (
 			<div>
-				<Router history={createHistory()}>
+				<Router history={this.props.history}>
 					<div>
 						<Switch>
 							<Route
@@ -80,14 +83,14 @@ class Main extends Component {
 	}
 }
 
-const mapStateToProps = () => {
+const mapStateToProps =
 	// this is where you get the state from reducers and
 	// pass them to this component as props
 	// this is useful for getting the authentication status of a
 	// user to determine whether to send them to a login page or
 	// main page
-	return null;
-};
+	null
+;
 
 const mapDispatchToProps = {
 	// this is where you get the dispatch functions from actions
