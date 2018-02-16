@@ -31,6 +31,7 @@ $ mongod
 ```
 
 Clone the repository and npm install like most node applications:
+
 ```sh
 $ git clone https://github.com/parkt2/kadopon-village.git
 $ cd kadopon-village
@@ -40,6 +41,23 @@ $ npm install
 ```
 
 Note there's two node servers here, one serving clients, and the other serving API routes.
+Copy over the config template if you haven't already:
+
+```sh
+$ cp config.template.js config.js
+```
+
+Edit the config file per your environment, then you can finally start the server:
+
+```sh
+$ npm start
+```
+
+Note you can also start exclusively the backend API server for your own testing, but generally the frontend won't work properly without starting the backend as well:
+
+```sh
+$ npm run server
+```
 
 Use an editor like [Atom](https://atom.io/), [VSCode](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/) so you can take advantage of plugins specifically designed to develop Node.js applications.
 
