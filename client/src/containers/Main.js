@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import createHistory from "history/createBrowserHistory";
 import {
-	BrowserRouter as Router,
+	Router,
 	Route,
 	Redirect,
 	Switch,
 } from "react-router-dom";
 import { connect } from "react-redux";
 
+import Splash from "../components/Splash";
 import Error404 from "../components/errors/Error404";
 
 class Main extends Component {
@@ -21,7 +22,7 @@ class Main extends Component {
 
 	componentDidMount() {
 		this.callApi()
-			.then(res => this.setState({ response: res.Express }))
+			.then(res => this.setState({ response: res.express }))
 			.catch(err => console.log(err));
 	}
 
@@ -41,7 +42,7 @@ class Main extends Component {
 			path={route.path}
 			exact={route.exact}
 			strict={route.strict}
-			render={() => (route.component)}
+			render={props => <route.component {...props} />}
 		/>
 	));
 
@@ -50,17 +51,22 @@ class Main extends Component {
 			{
 				key: "splash",
 				path: "/",
-				component: null, // this can't be null, but you need to fill this out
+				component: Splash,
 				exact: true,
 			},
 		];
 
 		return (
 			<div>
-				<p>{this.state.response}</p>
 				<Router history={createHistory()}>
 					<div>
 						<Switch>
+							<Route
+								path="/"
+								render={(routeProps) => (
+									<Splash {...routeProps} testString={this.state.response} />
+								)}
+							/>
 							{this.renderRoutes(routes)}
 							<Route
 								path="*"
