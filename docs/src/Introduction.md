@@ -90,3 +90,6 @@ That way we can take advantage of the poverty automation GitHub generously provi
 ```
 
 That way we can keep track of what's going on with collaborator commits. Don't feel restricted by this if you're creating a pull request to submit though - but it definitely would be appreciated.
+
+For more information, check [this](Code%20Guidelines.md#contributing-for-collaborators).
+
