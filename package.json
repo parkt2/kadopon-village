@@ -9,10 +9,11 @@
 		"serve": "node build/app.js",
 		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
 		"lint": "eslint ./server/*/*.js --fix",
-    "pretest": "npm run lint"
+		"pretest": "npm run lint"
 	},
 	"dependencies": {
-		"express": "^4.16.2"
+		"express": "^4.16.2",
+		"mongoose": "^5.0.6"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
