@@ -17,7 +17,15 @@
         "react",
     ],
     "rules": {
-        "no-console": 0,
+        "no-console": [
+            "error",
+            {
+              "allow": [
+                  "warn",
+                  "error"
+              ]
+            }
+        ],
         "no-multi-assign": 0,
         "indent": [
             "error",
