@@ -1,16 +1,43 @@
 import React, { Component } from "react";
-import createHistory from "history/createBrowserHistory";
 import {
-	BrowserRouter as Router,
+	Router,
 	Route,
-	Redirect,
 	Switch,
 } from "react-router-dom";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
+import Splash from "../components/Splash";
 import Error404 from "../components/errors/Error404";
 
 class Main extends Component {
+	static propTypes = {
+		history: PropTypes.shape({}),
+	}
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			response: "",
+		};
+	}
+
+	componentDidMount() {
+		this.callApi()
+			.then(res => this.setState({ response: res.express }))
+			.catch(err => console.error(err));
+	}
+
+	callApi = async () => {
+		const response = await fetch("/api/hello");
+		const body = await response.json();
+
+		if (response.status !== 200) throw Error(body.message);
+
+		return body;
+	}
+
 	// some function here to check if a user is authenticated
 	renderRoutes = routes => routes.map(route => (
 		<Route
@@ -18,7 +45,7 @@ class Main extends Component {
 			path={route.path}
 			exact={route.exact}
 			strict={route.strict}
-			render={() => (route.component)}
+			render={props => <route.component {...props} />}
 		/>
 	));
 
@@ -27,16 +54,22 @@ class Main extends Component {
 			{
 				key: "splash",
 				path: "/",
-				component: null, // this can't be null, but you need to fill this out
+				component: Splash,
 				exact: true,
 			},
 		];
 
 		return (
 			<div>
-				<Router history={createHistory()}>
+				<Router history={this.props.history}>
 					<div>
 						<Switch>
+							<Route
+								path="/"
+								render={routeProps => (
+									<Splash {...routeProps} testString={this.state.response} />
+								)}
+							/>
 							{this.renderRoutes(routes)}
 							<Route
 								path="*"
@@ -50,14 +83,14 @@ class Main extends Component {
 	}
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps =
 	// this is where you get the state from reducers and
 	// pass them to this component as props
 	// this is useful for getting the authentication status of a
 	// user to determine whether to send them to a login page or
 	// main page
-	return null;
-};
+	null
+;
 
 const mapDispatchToProps = {
 	// this is where you get the dispatch functions from actions

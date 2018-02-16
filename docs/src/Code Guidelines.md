@@ -60,6 +60,15 @@ import {
 import { single } from "multiple";
 ```
 
+Furthermore, ensure that the first block of imports are from packages, and the second block of imports are local files:
+
+```js
+import x from "y";
+import a from "b";
+
+import local from "./local";
+```
+
 ### Tabs and Spaces
 Tabs please - just to support the various different spacing lengths people use. Spaces should be used for aligning comments.
 
