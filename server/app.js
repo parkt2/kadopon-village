@@ -14,4 +14,6 @@ app.get("/api/hello", (req, res) => {
   res.send({ express: "hello hello" });
 });
 
+// routing stuff should go here...
+
 app.listen(port, () => console.log(`Listening on port ${port}`));

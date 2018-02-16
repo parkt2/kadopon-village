@@ -9,6 +9,9 @@ If you haven't already, check out the following resources:
  * [React](https://facebook.github.io/react/)
  * [Redux](http://redux.js.org/)
  * [Jest](https://facebook.github.io/jest/)
+ * [Express](http://expressjs.com/en/guide/routing.html)
+ * [Mongoose](http://mongoosejs.com/docs/guide.html)
+ * [MongoDB](https://docs.mongodb.com/)
 
 Also, some of the following topics are helpful for newcomers to Javascript and ES6:
  * var vs let vs const
@@ -19,12 +22,24 @@ Also, some of the following topics are helpful for newcomers to Javascript and E
 
 ### Initial Development Setup
 
-Clone the repository and npm install like most node applications:
+Set up mongo if you haven't already; check documentation for your OS. It's most likely this:
+
+```sh
+$ mdkir -p /data/db
+$ chown -R <user>:<group> /data/db
+$ mongod
 ```
+
+Clone the repository and npm install like most node applications:
+```sh
 $ git clone https://github.com/parkt2/kadopon-village.git
 $ cd kadopon-village
 $ npm install
+$ cd client
+$ npm install
 ```
+
+Note there's two node servers here, one serving clients, and the other serving API routes.
 
 Use an editor like [Atom](https://atom.io/), [VSCode](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/) so you can take advantage of plugins specifically designed to develop Node.js applications.
 
