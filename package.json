@@ -1,43 +1,19 @@
 {
-  "name": "kadopon-village",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src/*/*.js --fix",
-    "pretest": "npm run lint"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "express": "^4.16.2",
-    "history": "^4.7.2",
-    "lodash": "^4.17.4",
-    "moment": "^2.19.1",
-    "mongoose": "^5.0.5",
-    "prop-types": "^15.6.0",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "react-router-config": "^1.0.0-beta.4",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.13",
-    "react-tooltip": "^3.4.0",
-    "redux": "^3.7.2",
-    "redux-form": "^7.1.2",
-    "redux-logger": "^3.0.6",
-    "redux-observable": "^0.17.0",
-    "redux-thunk": "^2.2.0",
-    "rxjs": "^5.5.2"
-  },
-  "devDependencies": {
-    "eslint": "^4.6.1",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.3.0"
-  }
+	"name": "kadopon",
+	"private": true,
+	"version": "0.1.0",
+	"scripts": {
+		"client": "cd client && npm start",
+		"server": "nodemon server.js",
+		"dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+	},
+	"dependencies": {
+		"express": "^4.16.2"
+	},
+	"devDependencies": {
+		"concurrently": "^3.5.1",
+		"eslint": "^4.17.0",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-plugin-import": "^2.8.0"
+	}
 }
