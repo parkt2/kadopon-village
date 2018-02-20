@@ -2,32 +2,26 @@
 ==========
 
 ## Concept
-
 A JRPG / Monopoly inspired browser-based board game based off the hit Dokapon Kingdom game.
 
 ### Installation
 
-```
+```sh
 $ npm install
+$ cd client && npm install
 ```
 
 ### Running the server
+You will need a mongodb instance running. Make sure you `npm start` inside the root, and not inside `client/`.
 
-```
+```sh
+$ mongod
 $ npm start
-```
-Port defaults to 3000 when unspecified.
-
-### Production
-
-```
-$ npm run build
-$ serve -s build -p <port>
 ```
 
 ### Tests
 
-```
+```sh
 $ npm test
 ```
 Testing is done with Jest currently; looking into Karma and Enzyme however.
