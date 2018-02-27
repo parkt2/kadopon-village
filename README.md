@@ -28,4 +28,4 @@ Testing is done with Jest currently; looking into Karma and Enzyme however.
 
 ## Mechanics, game information, and other stuff
 
-See [/docs](../../tree/master/docs).
+See [/docs](https://github.com/parkt2/kadopon-village/wiki).
