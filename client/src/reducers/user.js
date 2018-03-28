@@ -1,29 +1,29 @@
 import { combineReducers } from "redux";
 
 import {
-	USERS_AUTHENTICATE,
-	USERS_LOGGING_IN,
-	USERS_LOGOUT,
-	USERS_REGISTERING,
-} from "../actions/users";
+	USER_AUTHENTICATE,
+	USER_LOGGING_IN,
+	USER_LOGOUT,
+	USER_REGISTERING,
+} from "../actions/user";
 
 const currentUser = (state = {
 	isFetching: false,
 }, action) => {
 	switch (action.type) {
-	case USERS_AUTHENTICATE:
+	case USER_AUTHENTICATE:
 		return Object.assign({}, state, {
 			jwtToken: action.jwtToken,
 		});
-	case USERS_LOGGING_IN:
+	case USER_LOGGING_IN:
 		return Object.assign({}, state, {
 			isFetching: action.isFetching,
 		});
-	case USERS_LOGOUT:
+	case USER_LOGOUT:
 		return Object.assign({
 			isFetching: false,
 		});
-	case USERS_REGISTERING:
+	case USER_REGISTERING:
 		return Object.assign({}, state, {
 			isFetching: action.isFetching,
 		});
@@ -32,8 +32,8 @@ const currentUser = (state = {
 	}
 };
 
-const users = combineReducers({
+const user = combineReducers({
 	currentUser,
 });
 
-export default users;
+export default user;
