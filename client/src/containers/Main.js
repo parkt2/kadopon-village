@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import Splash from "../components/Splash";
+import Game from "../components/Game";
 import Error404 from "../components/errors/Error404";
 
 class Main extends Component {
@@ -52,9 +53,9 @@ class Main extends Component {
 	render() {
 		const routes = [
 			{
-				key: "splash",
-				path: "/",
-				component: Splash,
+				key: "game",
+				path: "/game",
+				component: Game,
 				exact: true,
 			},
 		];
@@ -66,6 +67,7 @@ class Main extends Component {
 						<Switch>
 							<Route
 								path="/"
+								exact
 								render={routeProps => (
 									<Splash {...routeProps} testString={this.state.response} />
 								)}
