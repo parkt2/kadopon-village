@@ -14,6 +14,7 @@ export default class Splash extends Component {
 		return (
 			<div>
 				<p>{testString}</p>
+				<a href="/game">&gt;&gt;game</a>
 			</div>
 		);
 	}
