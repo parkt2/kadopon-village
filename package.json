@@ -3,12 +3,10 @@
 	"private": true,
 	"version": "0.1.0",
 	"scripts": {
-		"client": "cd client && npm start",
-		"server": "nodemon server/app.js --exec babel-node",
 		"build": "babel server -d build",
 		"serve": "node build/app.js",
-		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-		"lint": "eslint ./server/*/*.js --fix",
+		"start": "babel-node index.js",
+		"lint": "eslint ./src/*/*.js --fix",
 		"pretest": "npm run lint"
 	},
 	"dependencies": {
@@ -19,12 +17,10 @@
 		"babel-cli": "^6.26.0",
 		"babel-eslint": "^8.2.2",
 		"babel-preset-env": "^1.6.1",
-		"concurrently": "^3.5.1",
 		"eslint": "^4.17.0",
 		"eslint-config-airbnb": "^16.1.0",
 		"eslint-plugin-import": "^2.8.0",
 		"eslint-plugin-jsx-a11y": "^6.0.3",
 		"eslint-plugin-react": "^7.6.1",
-		"nodemon": "^1.15.0"
 	}
 }
