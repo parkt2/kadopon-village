@@ -3,7 +3,7 @@
  "private": true,
  "version": "0.1.0",
  "scripts": {
-  "dev": "webpack",
+  "start": "webpack",
   "deploy": "webpack --config webpack.production.config.js",
   "lint": "eslint ./src/*/*.js --fix",
   "pretest": "npm run lint"
